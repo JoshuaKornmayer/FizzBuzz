@@ -1,8 +1,9 @@
 package FizzBuzz;
 
 public class FizzBuzz {
-    public void execute() {
+    public String execute(int[] numbers) {
 
+        return processNumber(numbers[0]);
     }
 
     public String processNumber(int number) {
