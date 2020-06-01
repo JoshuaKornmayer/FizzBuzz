@@ -6,14 +6,22 @@ public class FizzBuzz {
     }
 
     public String processNumber(int number) {
-        if (number % 3 == 0 && number % 5 == 0) {
+        if (ismultipleOf3(number) && isMultipleOf5(number)) {
             return "Fizz Buzz";
-        } else if (number % 3 == 0) { // if number is divisible by 3, remainder will be zero
+        } else if (ismultipleOf3(number)) { // if number is divisible by 3, remainder will be zero
             return "Fizz";
-        } else if (number % 5 == 0) {
+        } else if (isMultipleOf5(number)) {
             return "Buzz";
         } else {
             return Integer.toString(number);
         }
+    }
+
+    private boolean ismultipleOf3(int number) {
+        return number % 3 == 0;
+    }
+
+    private boolean isMultipleOf5(int number) {
+        return number % 5 == 0;
     }
 }
